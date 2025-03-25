@@ -13,6 +13,17 @@ https://drive.google.com/file/d/1xdKH9Fsic8moZ6AIdZbf54_0t9hJ50gr/view?usp=shari
 sudo ./upgrade_tool DI -p parameter   -s RK3188Loader\(L\)_V2.19.bin -b sdboot_rk3188.img -m update.img   package-file
 ```
 
+You need to add xenial updates repo first for upgrading the OS
+```
+cat /etc/apt/sources.list
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial main universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial main universe
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial-updates main universe
+deb-src http://ports.ubuntu.com/ubuntu-ports/ xenial-updates main universe
+deb http://ports.ubuntu.com/ubuntu-ports/ xenial-backports main universe
+
+```
+
 Push the image into the device
 
 ```
